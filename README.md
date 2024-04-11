@@ -1,52 +1,27 @@
-# Angular Bootcamp
+# 00AngularBootcampOverview
 
-Welcome to the Angular Bootcamp!
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
 
-Version 1.0.0 🧐
+## Development server
 
-## Prerequisites
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Before beginning, you'll need to have Node.js installed on your machine.
-Node.js is essential for running the Angular CLI, which is the tool we'll use to create and manage our Angular projects.
+## Code scaffolding
 
-If you haven't installed Node.js yet, follow the instructions below:
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-### Linux, macOS
+## Build
 
-Install nvm, with:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-```
+## Running unit tests
 
-Then, install Node.js with:
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-```bash
-nvm install --lts
-```
+## Running end-to-end tests
 
-### Windows
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-To install Node.js on Windows, you can either:
+## Further help
 
--   Use [nvm-windows](https://github.com/coreybutler/nvm-windows) by following its provided instructions.
-
--   Alternatively, download Node.js directly using the installer available at the [official Node.js website](https://nodejs.org/).
-
-If you are using Windows Subsystem for Linux (WSL), please refer to the installation instructions for Linux.
-
-## Getting Started
-
-Install the Angular CLI globally with:
-
-```bash
-npm install -g @angular/cli
-```
-
-Once the Angular CLI is installed, you can create a new Angular project with:
-
-```bash
-ng new angular-bootcamp
-```
-
-Well done! You've created your first Angular project. 🎉
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
