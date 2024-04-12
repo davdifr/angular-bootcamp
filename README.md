@@ -40,3 +40,16 @@ For example, change the content of the `app.component.html` file to:
 ```
 
 ![hello-angular-bootcamp](src/assets/00-angular-bootcamp-overview/00-hello-angular-bootcamp.png)
+
+We can style the content using CSS.
+For example, change the content of the `app.component.css` file to:
+
+```css
+h1 {
+  color: red;
+}
+```
+
+![hello-angular-bootcamp](src/assets/00-angular-bootcamp-overview/00-hello-angular-bootcamp-red.png)
+
+Note that there is a `styles.css` file in the `src` folder. This file is used to add global styles to the application. **The styles added in this file will be applied to all the components in the application**.
