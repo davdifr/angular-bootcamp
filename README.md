@@ -51,4 +51,4 @@ ng new angular-bootcamp
 
 Well done! You've created your first Angular project. 🎉
 
-### [Next section: 00-angular-bootcamp-overview](https://github.com/davdifr/angular-bootcamp/tree/00-angular-bootcamp-overview)
+### [➡️ Next section: 00-angular-bootcamp-overview](https://github.com/davdifr/angular-bootcamp/tree/00-angular-bootcamp-overview)
