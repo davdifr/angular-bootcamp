@@ -54,4 +54,4 @@ h1 {
 
 Note that there is a `styles.css` file in the `src` folder. This file is used to add global styles to the application. **The styles added in this file will be applied to all the components in the application**.
 
-### [Next section: 01-angular-bootcamp-components](https://github.com/davdifr/angular-bootcamp/tree/01-angular-bootcamp-components)
+### [➡️ Next section: 01-angular-bootcamp-components](https://github.com/davdifr/angular-bootcamp/tree/01-angular-bootcamp-components)
