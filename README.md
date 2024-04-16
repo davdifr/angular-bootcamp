@@ -70,3 +70,40 @@ _app.component.ts_
 
 Restart the application and you should see the welcome message displayed in the browser.
 ![welcome-to-angular-component](src/assets/01-angular-bootcamp-components/01-welcome-to-angular-component.png)
+
+## Component Lifecycle
+
+Angular components have a defined lifecycle managed by specific lifecycle hooks, allowing developers to tap into key moments in the life of a component. Here’s an overview of the primary lifecycle hooks available:
+
+- `ngOnInit`: Called after the component has been initialized.
+- `ngOnChanges`: Called when the component's input properties change.
+- `ngDoCheck`: Called during every change detection run.
+- `ngAfterContentInit`: Called after the component's content has been initialized.
+- `ngAfterContentChecked`: Called after the component's content has been checked.
+- `ngAfterViewInit`: Called after the component's view has been initialized.
+- `ngAfterViewChecked`: Called after the component's view has been checked.
+- `ngOnDestroy`: Called just before the component is destroyed.
+
+_More details about the lifecycle hooks can be found [here](https://angular.io/guide/lifecycle-hooks)._
+
+To see how these hooks can be implemented, consider this simple example:
+
+```typescript
+export class WelcomeToAngularComponent {
+  message = "Welcome to Angular Bootcamp!";
+
+  constructor() {
+    console.log(`constructor(): ${this.message}`);
+  }
+
+  ngOnInit() {
+    this.message = "Welcome from ngOnInit!";
+    console.log(`ngOnInit(): ${this.message}`);
+  }
+}
+```
+
+In this example, the constructor prints the initial message when the component instance is created, and the ngOnInit hook modifies the message and logs it again.
+
+Here's a screenshot of the console displaying the result:
+![ngOnInit in console](src/assets/01-angular-bootcamp-components/01-hooks-in-console.png)
