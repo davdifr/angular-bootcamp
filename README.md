@@ -81,8 +81,10 @@ export class AppComponent {
 }
 ```
 
-Therefore, the message "Welcome to Angular Bootcamp, Davide!" will show up. We've achieved successful data transfer from the parent component to the child component through property binding.
+Therefore, the message "Welcome to Angular Bootcamp, Davide!" will show up.
 
 ![welcome-davide](/src/assets/02-angular-bootcamp-data-binding/02-welcome-to-angular-bootcamp-davide.png)
+
+We've achieved successful data transfer from the parent component to the child component through property binding. 🥳
 
 ## Event Binding
