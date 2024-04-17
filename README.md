@@ -44,7 +44,7 @@ _welcome-to-angular.component.css_
 }
 ```
 
-## Display the component
+## Display
 
 To display the component in the application, we need to add the **selector** of the component to the `app.component.html` file:
 
@@ -107,3 +107,16 @@ In this example, the constructor prints the initial message when the component i
 
 Here's a screenshot of the console displaying the result:
 ![ngOnInit in console](src/assets/01-angular-bootcamp-components/01-hooks-in-console.png)
+
+### What Are Standalone Components?
+
+- A standalone component is a type of component that doesn’t belong to any specific Angular module.
+- In previous Angular versions, when you created a component, you typically had to include it in the declaration array of a module; otherwise, Angular would throw an error during compilation.
+- However, with standalone components, this restriction is lifted, making component creation more flexible and streamlined.
+
+### Key Features of Standalone Components:
+
+- No NgModule Dependency: Standalone components don’t require Angular Modules (NgModule). They self-manage their dependencies.
+- Lazy Loading: These components can be lazy loaded via Angular router, enhancing performance.
+
+### [➡️ Next section: 02-angular-bootcamp-data-binding](https://github.com/davdifr/angular-bootcamp/tree/02-angular-bootcamp-data-binding)
