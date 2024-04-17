@@ -10,5 +10,9 @@ import { Component, Input } from '@angular/core';
 export class WelcomeToAngularComponent {
   @Input() name: string = 'User';
 
-  message = `Welcome to Angular Bootcamp ${this.name}!`;
+  message = 'Welcome to Angular Bootcamp!';
+
+  ngOnInit() {
+    this.message = `Welcome to Angular Bootcamp, ${this.name}!`;
+  }
 }
