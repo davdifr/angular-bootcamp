@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-welcome-to-angular',
@@ -8,14 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './welcome-to-angular.component.css',
 })
 export class WelcomeToAngularComponent {
-  message = 'Welcome to Angular Bootcamp!';
+  @Input() name: string = 'User';
 
-  constructor() {
-    console.log(`constructor(): ${this.message}`);
-  }
-
-  ngOnInit() {
-    this.message = 'Welcome from ngOnInit!';
-    console.log(`ngOnInit(): ${this.message}`);
-  }
+  message = `Welcome to Angular Bootcamp ${this.name}!`;
 }

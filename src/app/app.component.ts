@@ -10,4 +10,5 @@ import { WelcomeToAngularComponent } from './welcome-to-angular/welcome-to-angul
 })
 export class AppComponent {
   title = '02-angular-bootcamp-data-binding';
+  firstName = 'Davide';
 }
