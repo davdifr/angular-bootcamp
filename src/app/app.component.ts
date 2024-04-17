@@ -9,5 +9,5 @@ import { WelcomeToAngularComponent } from './welcome-to-angular/welcome-to-angul
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = '01-angular-bootcamp-components';
+  title = '02-angular-bootcamp-data-binding';
 }
