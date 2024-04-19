@@ -1,3 +1,13 @@
 <app-welcome-to-angular [name]="firstName"></app-welcome-to-angular>
 <!-- <app-button-click (buttonClicked)="onButtonClicked()"></app-button-click> -->
+@if (showTwoWayBinding) {
 <app-two-way-binding></app-two-way-binding>
+} @else {
+<p>Two way binding component is hidden</p>
+}
+
+<button (click)="toggleTwoWayBinding()">Toggle Two Way Binding</button>
+
+@for (person of peopleList; track $index) {
+<p>{{ person.name }} is {{ person.age }} years old</p>
+}
