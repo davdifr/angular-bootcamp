@@ -88,3 +88,148 @@ Therefore, the message "Welcome to Angular Bootcamp, Davide!" will show up.
 We've achieved successful data transfer from the parent component to the child component through property binding. 🥳
 
 ## Event Binding
+
+We can you use event binding to trigger functions in the parent component using the `@Output()` decorator.
+
+First, let's create a new component called `button-click`.
+
+```bash
+ng generate component button-click
+```
+
+Then modify the `button-click` component to emit an event when the button is clicked.
+
+_button-click.component.ts_
+
+```typescript
+export class ButtonClickComponent {
+  @Output() buttonClicked = new EventEmitter();
+
+  onClick() {
+    this.buttonClicked.emit();
+  }
+}
+```
+
+The `@Output()` decorator is used to create an event emitter that emits an event when the button is clicked.
+
+The `onClick()` function emits the event when the button is clicked.
+
+_button-click.component.html_
+
+```html
+<button (click)="onClick()">Click me!</button>
+```
+
+Now, let's bind the `buttonClicked` event to the `app-button-click` component in the `app.component.html` file.
+
+_app.component.html_
+
+```html
+<app-button-click (buttonClicked)="onButtonClick()"></app-button-click>
+```
+
+And create the `onButtonClick()` function in the `app.component.ts` file.
+
+_app.component.ts_
+
+```typescript
+@Component({
+  selector: "app-root",
+  standalone: true,
+  imports: [WelcomeToAngularComponent, ButtonClickComponent],
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.css",
+})
+export class AppComponent {
+  title = "02-angular-bootcamp-data-binding";
+  firstName = "Davide";
+
+  onButtonClicked() {
+    alert("Button clicked!");
+  }
+}
+```
+
+When the button is clicked, an alert will be displayed with the message "Button clicked!".
+
+![button-clicked](/src/assets/02-angular-bootcamp-data-binding/02-button-clicked.png)
+
+Note that `(click)` acts as the event binding syntax, which listens for click events on the button element. It's worth mentioning that we could have achieved the same outcome by triggering an alert directly from the child component.
+
+However, emitting the event to the parent component provides a more comprehensive example.
+
+## Two-way Binding
+
+Two-way binding is a combination of property binding and event binding. It allows data to flow in both directions, from the component to the view and vice versa.
+
+To demonstrate two-way binding, we'll use the `[(ngModel)]` directive, which is part of the `FormsModule` module.
+
+First, create a new component called `two-way-binding`.
+
+```bash
+ng g c two-way-binding
+```
+
+Modify the `two-way-binding` component as follow.
+
+_two-way-binding.component.ts_
+
+```typescript
+@Component({
+  selector: "app-two-way-binding",
+  standalone: true,
+  imports: [FormsModule],
+  templateUrl: "./two-way-binding.component.html",
+  styleUrl: "./two-way-binding.component.css",
+})
+export class TwoWayBindingComponent {
+  name = "Davide";
+}
+```
+
+_two-way-binding.component.html_
+
+```html
+<input [(ngModel)]="name" placeholder="Enter your name" />
+
+<p>Your name is: {{ name }}</p>
+```
+
+The `[(ngModel)]` directive binds the input element's value to the `name` property.
+
+The `name` property is displayed below the input element using **interpolation**.
+
+As always add the component to the `app.component.html` file and in the imports array of the `app.component.ts` file.
+
+_app.component.ts_
+
+```typescript
+@Component({
+selector: 'app-root',
+standalone: true,
+imports: [
+  WelcomeToAngularComponent,
+  ButtonClickComponent,
+  TwoWayBindingComponent,
+],
+templateUrl: './app.component.html',
+styleUrl: './app.component.css',
+})
+```
+
+_app.component.html_
+
+```html
+<app-welcome-to-angular [name]="firstName"></app-welcome-to-angular>
+<!-- <app-button-click (buttonClicked)="onButtonClicked()"></app-button-click> -->
+<app-two-way-binding></app-two-way-binding>
+```
+
+When you run the application, you'll see an input element where you can enter your name.
+
+![two-way-binding](/src/assets/02-angular-bootcamp-data-binding/02-two-way-binding.gif)
+
+We completed the data binding section. For more information, check the official Angular documentation on [Data Binding](https://angular.io/guide/binding-syntax#data-binding-and-html).
+
+### [➡️ Next section: 03-angular-bootcamp-control-flow](https://github.com/davdifr/angular-bootcamp/tree/03-angular-bootcamp-control-flow)
