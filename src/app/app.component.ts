@@ -3,6 +3,7 @@ import { WelcomeToAngularComponent } from './welcome-to-angular/welcome-to-angul
 import { ButtonClickComponent } from './button-click/button-click.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { Person } from './models/person.interface';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -11,14 +12,16 @@ import { Person } from './models/person.interface';
     WelcomeToAngularComponent,
     ButtonClickComponent,
     TwoWayBindingComponent,
+    FormsModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = '02-angular-bootcamp-data-binding';
+  title = '03-angular-bootcamp-control-flow';
   firstName = 'Davide';
   showTwoWayBinding = false;
+  color: string = '';
 
   peopleList: Person[] = [
     {

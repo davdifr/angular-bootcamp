@@ -91,3 +91,54 @@ One more thing to note is that in case of an empty array, the `@for` block will 
 <p>No people found</p>
 }
 ```
+
+## `@switch`
+
+The `@switch` block is used to switch between multiple cases.
+
+The value of the conditional expression is compared to the case expression using the `===` operator.
+
+Let's demonstrate this with an example.
+
+_app.component.ts_
+
+```typescript
+color: string = "";
+```
+
+Add a select element to the `app.component.html` file and the `@switch` block to display a message based on the selected color:
+
+_app.component.html_
+
+```html
+<h2>Pick your favorite color</h2>
+<select [(ngModel)]="color">
+  <option value="red">Red</option>
+  <option value="blue">Blue</option>
+  <option value="green">Green</option>
+  <option value="yellow">Yellow</option>
+</select>
+```
+
+Note that we are using `[(ngModel)]` to bind the selected value to the `color` property.
+
+```html
+@switch(color) { @case ('red') {
+<p style="color: red">You picked red</p>
+} @case ('blue') {
+<p style="color: blue">You picked blue</p>
+} @case ('green') {
+<p style="color: green">You picked green</p>
+} @case ('yellow') {
+<p style="color: yellow">You picked yellow</p>
+} @default {
+<p>Please pick a color</p>
+} }
+```
+
+_Note that the `@default` block is optional and will be rendered if none of the cases match._
+
+Result looks like this:
+![switch](/src/assets/03-angular-bootcamp-control-flow/03-switch-block.gif)
+
+### [➡️ Next section: 04-angular-bootcamp-services-and-DI](https://github.com/davdifr/angular-bootcamp/tree/03-angular-bootcamp-services-and-DI)
