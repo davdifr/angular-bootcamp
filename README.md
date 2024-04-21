@@ -145,7 +145,7 @@ export class AppComponent {
   title = "02-angular-bootcamp-data-binding";
   firstName = "Davide";
 
-  onButtonClicked() {
+  onButtonClick() {
     alert("Button clicked!");
   }
 }
