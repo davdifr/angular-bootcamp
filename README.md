@@ -70,3 +70,6 @@ In the `app.component.html`:
 
 Result looks like this:
 ![click-counter](/src/assets/04-angular-bootcamp-services-and-DI/04-click-counter-service.gif)
+
+`AppComponent` is now responsible only for the view logic, and the service is responsible for the business logic.
+Any other component requiring the counter value can inject the service and access the **latest value**.
