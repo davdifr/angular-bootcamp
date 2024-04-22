@@ -141,4 +141,4 @@ _Note that the `@default` block is optional and will be rendered if none of the 
 Result looks like this:
 ![switch](/src/assets/03-angular-bootcamp-control-flow/03-switch-block.gif)
 
-### [➡️ Next section: 04-angular-bootcamp-services-and-DI](https://github.com/davdifr/angular-bootcamp/tree/03-angular-bootcamp-services-and-DI)
+### [➡️ Next section: 04-angular-bootcamp-services-and-DI](https://github.com/davdifr/angular-bootcamp/tree/04-angular-bootcamp-services-and-DI)
