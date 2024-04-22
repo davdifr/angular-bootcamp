@@ -4,6 +4,7 @@ import { ButtonClickComponent } from './button-click/button-click.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { Person } from './models/person.interface';
 import { FormsModule } from '@angular/forms';
+import { ClickCounterService } from './click-counter.service';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,16 @@ export class AppComponent {
   firstName = 'Davide';
   showTwoWayBinding = false;
   color: string = '';
+
+  constructor(private clickCounterService: ClickCounterService) {}
+
+  increment() {
+    this.clickCounterService.increment();
+  }
+
+  getCount() {
+    return this.clickCounterService.getCount();
+  }
 
   peopleList: Person[] = [
     {

@@ -1,9 +1,18 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ClickCounterService {
+  private count = 0;
 
-  constructor() { }
+  constructor() {}
+
+  increment() {
+    this.count++;
+  }
+
+  getCount() {
+    return this.count;
+  }
 }

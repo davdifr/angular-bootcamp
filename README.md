@@ -19,6 +19,8 @@ The metadata, `providedIn: 'root'`, tells Angular to provide the service in the 
 
 _More about provider can be found [here](https://angular.io/guide/providers)._
 
+Let's implement the service:
+
 ```typescript
 export class ClickCounterService {
   private count = 0;
@@ -34,3 +36,37 @@ export class ClickCounterService {
   }
 }
 ```
+
+Now, let's use the service in the `app.component.ts` by injecting it in the constructor:
+
+```typescript
+constructor(private clickCounterService: ClickCounterService) {}
+```
+
+Duo to the private access modifier, the service is only available in the `AppComponent` class. So, let's create a public method to increment the counter:
+
+_app.component.ts_
+
+```typescript
+increment() {
+  this.clickCounterService.increment();
+}
+```
+
+And a public method to get the count:
+
+```typescript
+getCount() {
+  return this.clickCounterService.getCount();
+}
+```
+
+In the `app.component.html`:
+
+```html
+<button (click)="increment()">Click me</button>
+<p>Button was clicked {{ getCount() }} times</p>
+```
+
+Result looks like this:
+![click-counter](/src/assets/04-angular-bootcamp-services-and-DI/04-click-counter-service.gif)
