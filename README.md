@@ -73,3 +73,5 @@ Result looks like this:
 
 `AppComponent` is now responsible only for the view logic, and the service is responsible for the business logic.
 Any other component requiring the counter value can inject the service and access the **latest value**.
+
+### [➡️ Next section: 05-angular-bootcamp-routing](https://github.com/davdifr/angular-bootcamp/tree/05-angular-bootcamp-routing)
