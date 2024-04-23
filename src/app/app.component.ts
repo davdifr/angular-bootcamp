@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
-import { WelcomeToAngularComponent } from './welcome-to-angular/welcome-to-angular.component';
-import { ButtonClickComponent } from './button-click/button-click.component';
-import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { Person } from './models/person.interface';
 import { FormsModule } from '@angular/forms';
-import { ClickCounterService } from './click-counter.service';
+import { ClickCounterService } from './services/click-counter/click-counter.service';
+import { WelcomeToAngularComponent } from './components/welcome-to-angular/welcome-to-angular.component';
+import { ButtonClickComponent } from './components/button-click/button-click.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    RouterModule,
     WelcomeToAngularComponent,
     ButtonClickComponent,
     TwoWayBindingComponent,
@@ -19,41 +21,5 @@ import { ClickCounterService } from './click-counter.service';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = '03-angular-bootcamp-control-flow';
-  firstName = 'Davide';
-  showTwoWayBinding = false;
-  color: string = '';
-
-  constructor(private clickCounterService: ClickCounterService) {}
-
-  increment() {
-    this.clickCounterService.increment();
-  }
-
-  getCount() {
-    return this.clickCounterService.getCount();
-  }
-
-  peopleList: Person[] = [
-    {
-      name: 'John',
-      age: 30,
-    },
-    {
-      name: 'Jane',
-      age: 25,
-    },
-    {
-      name: 'Doe',
-      age: 28,
-    },
-  ];
-
-  toggleTwoWayBinding() {
-    this.showTwoWayBinding = !this.showTwoWayBinding;
-  }
-
-  onButtonClicked() {
-    alert('Button clicked!');
-  }
+  title = '05-angular-bootcamp-routing';
 }
