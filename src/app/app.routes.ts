@@ -5,17 +5,17 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'primary',
-    pathMatch: 'full',
-  },
-  {
     path: 'primary',
     component: PrimaryPageComponent,
   },
   {
     path: 'secondary',
     component: SecondaryPageComponent,
+  },
+  {
+    path: '',
+    redirectTo: 'primary',
+    pathMatch: 'full',
   },
   {
     path: '**',
