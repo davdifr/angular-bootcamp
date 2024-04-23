@@ -93,4 +93,31 @@ _app.routes.ts_
 The `**` path is a wildcard route that matches any URL that doesn't match any of the other routes. This is why we add it at the end of the array.
 
 Result looks like this:
+
 ![Routing](/src/assets/05-angular-bootcamp-routing/05-routing.gif)
+
+But we haven't accomplished our goal yet. Currently, we're manually changing the URL in the browser, which causes a complete page reload. To navigate between pages without reloading, we need to add a `routerLink` directive to our navigation links.
+
+Change the `primary-page` template to include a link to the secondary page and vice versa.
+
+_primary-page.component.html_
+
+```html
+<h1>Primary Page</h1>
+<a routerLink="/secondary">Go to Secondary Page</a>
+```
+
+_secondary-page.component.html_
+
+```html
+<h1>Secondary Page</h1>
+<a routerLink="/primary">Go to Primary Page</a>
+```
+
+Also, it's necessary to add `RouterModule` to the imports of both components.
+
+Now, when we click on the links, the URL changes, and the components are displayed **without** a page reload.
+
+![routerLink](/src/assets/05-angular-bootcamp-routing/05-routerLink.gif)
+
+_**Small exercise**: Include a link to the not-found-page, which is displayed when the user enters an invalid URL. This link should redirect the user to the primary page._

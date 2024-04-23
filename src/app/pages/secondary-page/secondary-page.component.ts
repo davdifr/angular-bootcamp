@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-secondary-page',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './secondary-page.component.html',
-  styleUrl: './secondary-page.component.css'
+  styleUrl: './secondary-page.component.css',
 })
-export class SecondaryPageComponent {
-
-}
+export class SecondaryPageComponent {}
