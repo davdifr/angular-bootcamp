@@ -4,11 +4,12 @@ import { WelcomeToAngularComponent } from './components/welcome-to-angular/welco
 import { ButtonClickComponent } from './components/button-click/button-click.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { RouterModule } from '@angular/router';
+import { HttpRequestComponent } from './components/http-request/http-request.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, HttpRequestComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
