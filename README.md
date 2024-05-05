@@ -1,4 +1,4 @@
-# Angular Bootcamp - HTTP
+# HTTP
 
 ## HttpClient Service
 
