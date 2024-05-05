@@ -40,7 +40,7 @@ export class HttpRequestComponent {
 }
 ```
 
-In this code, we are making a GET request to the TVMaze API to fetch a list of TV shows. We are using the `get()` method of the HttpClient service to make the request. The `subscribe()` method is used to listen for the response.
+_We are making a GET request to the TVMaze API to fetch a list of TV shows._
 
 The `subscribe()` method takes an object with three properties: `next`, `error`, and `complete`. The `next` property is a callback function that is called when the response is received. The `error` property is a callback function that is called if an error occurs. The `complete` property is a callback function that is called when the request is completed.
 
