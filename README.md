@@ -121,3 +121,5 @@ Now, when we click on the links, the URL changes, and the components are display
 ![routerLink](/src/assets/05-angular-bootcamp-routing/05-routerLink.gif)
 
 _**Small exercise**: Include a link to the not-found-page, which is displayed when the user enters an invalid URL. This link should redirect the user to the primary page._
+
+### [➡️ Next section: 06-angular-bootcamp-http](https://github.com/davdifr/angular-bootcamp/tree/06-angular-bootcamp-http)
