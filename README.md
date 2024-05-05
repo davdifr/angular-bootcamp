@@ -50,7 +50,7 @@ After adding the component to our `AppComponent` file, we can see the data in th
 
 In this case we don't need to unsubscribe from the [observable](https://angular.io/guide/observables-in-angular) because the HttpClient service automatically unsubscribes when the request is completed.
 
-But in general, it is a **good practice** to unsubscribe from observables to **avoid memory leaks**. We can do this by storing the subscription in a variable and calling the `unsubscribe()` method on it when we are done with the observable.
+In general, it is a **good practice** to unsubscribe from observables to **avoid memory leaks**. We can do this by storing the subscription in a variable and calling the `unsubscribe()` method on it when we are done with the observable.
 
 ## Other request methods
 
